@@ -56,6 +56,10 @@ $count = $stmt->rowCount();
         <p><strong>Phone: </strong><?= $phone; ?></p>
         <p><strong>Email: </strong><?= $email; ?></p>
         <a href="client-edit.php?id=<?= $id;?>" class="btn">Edit</a>
+        <form action="client-delete.php" method="post">
+            <input type="hidden" name="id" value="<?= $id;?>">
+            <button type="submit" class="btn red">Delete</button>
+        </form>
 
     </div>
 </body>
